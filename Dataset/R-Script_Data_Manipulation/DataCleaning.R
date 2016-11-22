@@ -1,5 +1,5 @@
 #Setting the working directory to my local system
-setwd("G:/Semester IV/Scala/Project/Datasets/2015_Quarter3")
+setwd("E:/Boston/NEU/Fall 2016/Additional/Scala/Scala_Project")
 # INSTALL THE PACKAGE FIRST TIME
 #install.packages("sqldf")
 library("sqldf")
@@ -16,46 +16,44 @@ library(plyr)
 library(dplyr)
 
 # Data with the quarter and year details
-data_opcarrier <- fread(input ="104154270_T_DB1B_MARKET.csv",header = TRUE)
+data_tkcarrier <- fread(input ="312849061_T_DB1B_MARKET.csv",header = TRUE)
 
 #Data with the carrier, seats and source and destination details
-data_carrier <- fread(input = "104154270_T_T100D_SEGMENT_ALL_CARRIER.csv",header = TRUE)
+data_carrier <- fread(input = "104091949_T_T100D_SEGMENT_ALL_CARRIER.csv",header = TRUE)
 
 #Creating Lookup data of Airport ID
-lookup <- fread(input ="317448616_T_MASTER_CORD.csv",header = TRUE)
+lookup <- fread(input ="312840607_T_MASTER_CORD.csv",header = TRUE)
 uniquedata<- unique(lookup, by='AIRPORT_ID')
 
 #joining tables
-test1<-sqldf("select * from data_carrier as a inner join uniquedata as b on b.AIRPORT_ID=a.DEST_AIRPORT_ID")
-test2<-sqldf("select * from test1 as a inner join uniquedata as b on b.AIRPORT_ID=a.ORIGIN_AIRPORT_ID")
-
-colnames(test3)
-setnames(test3,c("AIRPORT_ID","AIRPORT_ID.1","LATITUDE","LONGITUDE","LONGITUDE.1","LATITUDE.1"),c("DEST_AIRPORT_ID","ORG_AIRPORT_ID","DEST_LATITUDE","DEST_LONGITUDE","ORG_LONGITUDE","ORG_LATITUDE"))
-
+#dest_sample<-sqldf("select * from data_carrier as a inner join uniquedata as b on b.AIRPORT_ID=a.DEST_AIRPORT_ID")
+origin_sample<-sqldf("select * from test1 as a inner join uniquedata as b on b.AIRPORT_ID=a.ORIGIN_AIRPORT_ID")
+cordinates<-sqldf("select a.origin_airport_id,c.latitude as ORIGIN_LATITUDE,c.longitude as ORIGIN_LONGITUDE,a.dest_airport_id,b.latitude as DES_LATITUDE,b.longitude as DEST_LONGITUDE from data_carrier as a inner join uniquedata as b on b.AIRPORT_ID=a.DEST_AIRPORT_ID inner join uniquedata as c on c.AIRPORT_ID=a.ORIGIN_AIRPORT_ID")
+data_input_cordinates <- cbind(origin_sample[,-c(3,8,14:22)],cordinates)
+#write.csv(sample,file = "testfile.csv",row.names = FALSE)
+#head(sample)
+#setnames(test2,c("AIRPORT_ID","AIRPORT_ID.1","LATITUDE","LONGITUDE","LONGITUDE.1","LATITUDE.1"),c("DEST_AIRPORT_ID","ORG_AIRPORT_ID","DEST_LATITUDE","DEST_LONGITUDE","ORG_LONGITUDE","ORG_LATITUDE"))
+#head(test2)
 #Creating a new data frame which contains the first 10000 rows
 # BETTER APPROACH TO USE SAMPLE FUCNTION. WILL ADD THAT IN THE NEXT UPDATED
 # SCRIPT
 # Test sample with data_opcarrier
-test_data <- data_opcarrier[1:10000,]
+test_data <- data_tkcarrier[1:10000,]
 
 # Test sample with data_carrier
-test_data2 <- data_carrier[1:10000,]
+test_data2 <- data_input_cordinates[1:10000,]
 
 # In opcarrier Data frame, the column OPERATING_CARRIER, is changed to CARRIER
 # This is to maintain the same column name for all data frames
-
-setnames(test_data,"TkCarrier","CARRIER")
-
-## Just a test sample to see the names of the columns for any data frame
-colnames(test_data)
-
-
+setnames(test_data,"TICKET_CARRIER","CARRIER")
 
 # SQL DF you can run any SQL command by treating the Data frame as a TABLE
 
-test.df <- sqldf("select a.YEAR,a.QUARTER,a.MARKET_FARE,b.SEATS,b.CARRIER,b.ORIGIN_AIRPORT_ID,b.ORIGIN,b.ORIGIN_CITY_NAME,b.ORIGIN_STATE_ABR,b.ORIGIN_STATE_NM,b.DEST_AIRPORT_ID,b.DEST,b.DEST_CITY_NAME,b.DEST_STATE_ABR,b.DEST_STATE_NM,b.MONTH from test_data a INNER JOIN test_data2 b ON a.CARRIER=b.CARRIER")
-size <-row(test.df)
-size
+#test.df <- sqldf("select a.YEAR,a.QUARTER,a.MARKET_FARE,b.SEATS,b.CARRIER,b.ORIGIN_AIRPORT_ID,b.ORIGIN,b.ORIGIN_CITY_NAME,b.ORIGIN_STATE_ABR,b.ORIGIN_STATE_NM,b.DEST_AIRPORT_ID,b.DEST,b.DEST_CITY_NAME,b.DEST_STATE_ABR,b.DEST_STATE_NM,b.MONTH from test_data a INNER JOIN test_data2 b ON a.CARRIER=b.CARRIER")
+test.df <- sqldf("select * from test_data a INNER JOIN test_data2 b ON a.CARRIER=b.CARRIER")
+test.df <- test.df[,-c(7)]
+
+
 #Generate Random value for Market fare between min and max of the market price 
 # for that quarter
 random <- sample(min(test.df$MARKET_FARE):max(test.df$MARKET_FARE),size,replace = TRUE)
@@ -73,24 +71,27 @@ size <- nrow(date_data)
 
 # Generating dates for a givenQuarter
 ## ***PLEASE CHANGE THE YEAR AND DATES BASED ON THE QUARTER YOU WISH TO GENERATE
-Date_Sample <- sample(seq(as.Date('2015/07/01'), as.Date('2015/09/31'), by="day"), size = size,replace = TRUE)
+DATE <- sample(seq(as.Date('2016/01/01'), as.Date('2016/03/31'), by="day"), size = size,replace = TRUE)
 
 # Days for the date sequence
-days <- weekdays(as.Date(Date_Sample,'%Y-%m-%d'))
+DAYS <- weekdays(as.Date(DATE,'%Y-%m-%d'))
 
 #Month for the dates generated
-month <- months(Date_Sample)
+MONTH <- months(DATE)
 
 #Binding the date data together
-date_data <- cbind(date_data,Date_Sample,days,month)
+date_data <- cbind(date_data,DATE,DAYS,MONTH)
 
 #Removing the columsn YEAR AND QUARTER FROM THE INITIAL DATA SET
-test.df <- test.df[,-c(1:2,16)]
+
+test.df <- test.df[,-c(1:2,5,15)]
 
 #FINAL DATA FRAME
 test.df <- cbind(test.df,date_data)
 
+
 ## WRITING IT TO A CSV FILE
 # PLEASE CHANGE THE NAME OF THE CSV FILE
-write.csv(test.df,file = "2015_Quarter3.csv",row.names = FALSE)
-
+write.csv(test.df,file = "2016_Quarter1.csv",row.names = FALSE)
+summary(test.df)
+str(test.df)
