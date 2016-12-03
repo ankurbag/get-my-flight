@@ -24,3 +24,7 @@ libraryDependencies ++= Seq(
 "org.apache.spark" % "spark-core_2.11" % "1.6.1",
 "org.apache.spark" % "spark-mllib_2.11" % "1.6.1"
 )
+// https://mvnrepository.com/artifact/com.databricks/spark-csv_2.10
+libraryDependencies += "com.databricks" % "spark-csv_2.10" % "1.5.0"
+
+

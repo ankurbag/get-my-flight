@@ -18,7 +18,7 @@ object PerceptronClassifier extends App {
 	val sqlContext = new org.apache.spark.sql.SQLContext(sc)
 	val sparkHome = "/Spark_Project/spark-2.0.2-bin-hadoop2.7/"//"/Applications/spark-1.5.1-bin-hadoop2.6/" // D:\Softwares\spark-2.0.2-bin-hadoop2.7\spark-2.0.2-bin-hadoop2.7
 	val trainingFile = "sample_multiclass_classification_data.txt"
-
+	//val trainingFile = "test.csv"
 	// this is used to implicitly convert an RDD to a DataFrame.
 	import sqlContext.implicits._
 
