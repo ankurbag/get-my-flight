@@ -1,0 +1,24 @@
+@(flightForm: Form[CreateFlightSearchForm])(implicit messages: Messages)
+
+@import helper._
+
+@main("Welcome to Play") {
+	<script type='text/javascript' src='@routes.Assets.versioned("javascripts/index.js")'></script>
+
+
+
+  @form(routes.FlightController.addPerson()) {
+		@inputText(flight("source"))
+		@inputText(flight("destination"))
+		@inputText(flight("dateOfTravel"))
+
+		<div class="buttons">
+			<input type="submit" value="Search Flight"/>
+		</div>
+
+	}
+
+	<ul id="flights"></ul>
+
+
+}
