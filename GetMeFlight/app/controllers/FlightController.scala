@@ -20,12 +20,12 @@ class FlightController @Inject() (repo: FlightRepository, val messagesApi: Messa
   /**
    * The mapping for the flight form.
    */
-  val flightForm: Form[CreateFlightSearchForm] = Form {
+  val flightForm: Form[FlightForm] = Form {
     mapping(
       "source" -> nonEmptyText,
       "destination" -> nonEmptyText
       "dateOfTravel" -> nonEmptyText
-    )(CreateFlightSearchForm.apply)(CreateFlightSearchForm.unapply)
+    )(FlightForm.apply)(FlightForm.unapply)
   }
 
   /**
@@ -40,9 +40,9 @@ class FlightController @Inject() (repo: FlightRepository, val messagesApi: Messa
    *
    * This is asynchronous, since we're invoking the asynchronous methods on PersonRepository.
    */
- /* def addPerson = Action.async { implicit request =>
+  def searchFlights = Action.async { implicit request =>
     // Bind the form first, then fold the result, passing a function to handle errors, and a function to handle succes.
-    personForm.bindFromRequest.fold(
+    flightForm.bindFromRequest.fold(
       // The error function. We return the index page with the error form, which will render the errors.
       // We also wrap the result in a successful future, since this action is synchronous, but we're required to return
       // a future because the person creation function returns a future.
@@ -50,15 +50,21 @@ class FlightController @Inject() (repo: FlightRepository, val messagesApi: Messa
         Future.successful(Ok(views.html.index(errorForm)))
       },
       // There were no errors in the from, so create the person.
-      person => {
+      /*person => {
         repo.create(person.name, person.age).map { _ =>
           // If successful, we simply redirect to the index page.
           Redirect(routes.PersonController.index)
         }
+      }*/
+      flightForm => {
+        val values = models.Flight(flightForm.source, flightForm.destination, flightForm.dateOfTravel)
+
+        //Redirect(routes..index())
       }
+
+
     )
   }
-*/
   /**
    * A REST endpoint that gets all the people as JSON.
    */
@@ -76,4 +82,4 @@ class FlightController @Inject() (repo: FlightRepository, val messagesApi: Messa
  * in a different way to your models.  In this case, it doesn't make sense to have an id parameter in the form, since
  * that is generated once it's created.
  */
-case class CreateFlightSearchForm(source: String, destination: String, dateOfTravel: String)
+case class FlightForm(source: String, destination: String, dateOfTravel: String)

@@ -26,7 +26,7 @@ class FlightRepository @Inject() (dbConfigProvider: DatabaseConfigProvider)(impl
   /**
    * Here we define the table. It will have a name of people
    */
-  private class FlightTable(tag: Tag) extends Table[Flight](tag, "flight") {
+  private class FlightsTable(tag: Tag) extends Table[Flight](tag, "flights") {
 
     /** The ID column, which is the primary key, and auto incremented */
     def id = column[Long]("id", O.PrimaryKey, O.AutoInc)
@@ -58,7 +58,7 @@ class FlightRepository @Inject() (dbConfigProvider: DatabaseConfigProvider)(impl
   /**
    * The starting point for all queries on the people table.
    */
-  private val flight = TableQuery[FlightTable]
+  private val flights = TableQuery[FlightsTable]
 
   /**
    * Create a person with the given name and age.
@@ -78,10 +78,13 @@ class FlightRepository @Inject() (dbConfigProvider: DatabaseConfigProvider)(impl
     ) += (name, age)
   }
 */
+  def searchFlights(s:String, d:String, date:String): Future[Flight] = db.run(flights.filter(_.source==s ).filter(_.destination==d).filter(_.dateOfTravel==d)).result
+
+
   /**
    * List all the people in the database.
    */
   def list(): Future[Seq[Flight]] = db.run {
-    flight.result
+    flights.result
   }
 }

@@ -1,4 +1,4 @@
-@(flightForm: Form[CreateFlightSearchForm])(implicit messages: Messages)
+@(flightForm: Form[FlightForm])(implicit messages: Messages)
 
 @import helper._
 
@@ -7,10 +7,10 @@
 
 
 
-  @form(routes.FlightController.addPerson()) {
-		@inputText(flight("source"))
-		@inputText(flight("destination"))
-		@inputText(flight("dateOfTravel"))
+  @form(routes.FlightController.searchFlights()) {
+		@inputText(flightForm("source"))
+		@inputText(flightForm("destination"))
+		@inputText(flightForm("dateOfTravel"))
 
 		<div class="buttons">
 			<input type="submit" value="Search Flight"/>
