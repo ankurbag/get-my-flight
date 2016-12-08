@@ -57,8 +57,8 @@ object PerceptronClassifier2 extends App {
 	val data2 = sqlContext.csvFile("test.csv")
 
 	//Rename any one column to features
-	//val DF2 = data2.withColumnRenamed("CARRIER", "features")
-	val DF2 = data2.select("MARKET_FARE","SEATS","ORIGIN_AIRPORT_ID");
+	//val df2 = data.withColumnRenamed("ip_crowding", "features")
+	val DF2 = data2.select("CARRIER","TICKET_FARE","DATE_OF_TRAVEL");
 
 	//scala> DF2.take(2)
 	//res6: Array[org.apache.spark.sql.Row] = Array([0,0,0], [0,0,1628859.542])
@@ -68,10 +68,10 @@ object PerceptronClassifier2 extends App {
 
 	//Convert all to double
 	val featureDf = DF2
-		.withColumn("MARKET_FARE",toDouble(DF2("MARKET_FARE")))
-		.withColumn("SEATS",toDouble(DF2("SEATS")))
-		.withColumn("ORIGIN_AIRPORT_ID",toDouble(DF2("ORIGIN_AIRPORT_ID")))
-		.select("MARKET_FARE","SEATS","ORIGIN_AIRPORT_ID")
+		.withColumn("CARRIER",toDouble(DF2("CARRIER")))
+		.withColumn("TICKET_FARE",toDouble(DF2("TICKET_FARE")))
+		.withColumn("DATE_OF_TRAVEL",toDouble(DF2("DATE_OF_TRAVEL")))
+		.select("CARRIER","TICKET_FARE","DATE_OF_TRAVEL")
 
 
 	//Define the format
@@ -83,8 +83,8 @@ object PerceptronClassifier2 extends App {
 
 	//Transformed dataset
 	val df = featureDf
-		.withColumn("features",toVec4(featureDf("ORIGIN_AIRPORT_ID"),featureDf("SEATS")))
-		.withColumn("label",encodeLabel(featureDf("MARKET_FARE")))
+		.withColumn("features",toVec4(featureDf("CARRIER"),featureDf("DATE_OF_TRAVEL")))
+		.withColumn("label",encodeLabel(featureDf("TICKET_FARE")))
 		.select("label", "features")
 
 	val splits = df.randomSplit(Array(0.6, 0.4), seed = 1234L)
