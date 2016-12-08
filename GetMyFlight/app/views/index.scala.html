@@ -1,0 +1,34 @@
+@(flight: Form[CreateFlightForm])(implicit messages: Messages)
+
+@import helper._
+
+@main("Welcome to Play") {
+	<script type='text/javascript' src='@routes.Assets.versioned("javascripts/index.js")'></script>
+
+	
+
+  @form(routes.FlightController.searchFlights()) {
+  <form class="form-horizontal">
+    <h2 class="form-signin-heading">Please Enter Your Flight Details</h2>
+	<label for="source" class="sr-only">Source</label>
+	@helper.input(flight("source")) { (id, name, value, args) =>
+    <input type="text" name="@name" required autofocus class="form-control" id="@id" @toHtmlArgs(args)>
+    } 
+	<label for="destination" class="sr-only">Destination</label>
+	@helper.input(flight("destination")) { (id, name, value, args) =>
+    <input type="text" name="@name" class="form-control" id="@id" @toHtmlArgs(args)>
+    } 
+    <label for="dateOfTravel" class="sr-only">Date Of Travel</label>
+	@helper.input(flight("dateOfTravel")) { (id, name, value, args) =>
+    <input type="text" name="@name" class="form-control" id="@id" @toHtmlArgs(args)>
+    } 
+
+		<div class="buttons">
+			<input type="submit" value="Search Flights"/>
+		</div>
+	}
+	</form>
+	
+	
+	
+}
