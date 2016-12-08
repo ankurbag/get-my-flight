@@ -1,0 +1,9 @@
+
+flight.success.flightList=Getting Flight list successfully.
+flight.success.flight=Getting Flight successfully.
+flight.error.flightNotExist=Flight does not exist.
+
+flight.success.created=Flight has been created successfully.
+flight.success.updated=Flight has been updated successfully.
+flight.success.deleted=Flight has been deleted successfully.
+flight.success.selected=Flight has been selected successfully.
