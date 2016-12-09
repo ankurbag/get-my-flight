@@ -4,6 +4,7 @@ var ERROR = 'error';
 var serverErrorMessage = 'Oops, something wrong :(';
 
 $(document).ready(function() {
+    
     console.log("ghusa");
     $('#flightDataTable').DataTable( {
         "ajax": {
@@ -13,9 +14,13 @@ $(document).ready(function() {
          "columns": [
                     { "data": "source" },
                     { "data": "destination" },
-                    { "data": "dateOfTravel"},
+                    { "data": "dateOfTravel",
+                        "type":"date",
+                        "format": "MM/DD/YYYY",
+                    },
                     { "data": "carrier" },
 					{ "data": "dateOfPriceFall" },
+					{"data": "actualPrice"},
 					{ "data": "predictedPrice" },
 					{ "data": "latitude" },
 					{ "data": "longitude" }
@@ -30,16 +35,14 @@ $(document).ready(function() {
     $('#flightDataTable thead th').each (function(){
            
         	var title = $('#flightDataTable thead th').eq($(this).index()).text();
-        	if(title==='Date of Travel'){
-        	        $(this).html('<input type="date" placeholder="Search '+title+'"/> ');
-        	}else{
+        	
         	    	$(this).html('<input type="text" placeholder="Search '+title+'"/> ');
-        	}
+        	
         
         });
         
-         tableflt.columns().eq(0).each(function( colIdx) {
-        	$('input' , tableflt.column(colIdx).header() ).on( 'keyup change', function() {
+       tableflt.columns().eq(0).each(function( colIdx) {
+        	$('input' , tableflt.column(colIdx).header()).on( 'keyup change', function() {
         	    console.log($(this.value));
         		tableflt
         				.column(colIdx)
@@ -48,6 +51,7 @@ $(document).ready(function() {
         	});
         	
         });	
+        
         
 
     // Delete flight event

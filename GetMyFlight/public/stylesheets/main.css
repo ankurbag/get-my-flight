@@ -7,7 +7,7 @@ html body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
- background: url('@routes.Assets.versioned("images/flight.jpg")') no-repeat center fixed;
+ background: url('flight.jpg') no-repeat center fixed;
   
 }
 
