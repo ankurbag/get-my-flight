@@ -60,12 +60,10 @@ private[repo] trait FlightTable {
     val predictedPrice = column[String]("predictedPrice")
     val latitude = column[String]("latitude")
     val longitude = column[String]("longitude")
-    val distance = column[String]("distance")
-    val seats = column[String]("seats")
 
 
 
-   def * = (source, destination, carrier, dateOfTravel, dateOfPriceFall, predictedPrice, latitude,longitude, distance,seats,id.?) <> ((Flight.apply _).tupled, Flight.unapply)
+   def * = (source, destination, carrier, dateOfTravel, dateOfPriceFall, predictedPrice, latitude,longitude,id.?) <> ((Flight.apply _).tupled, Flight.unapply)
   }
 
 }

@@ -13,32 +13,45 @@ $(document).ready(function() {
          "columns": [
                     { "data": "source" },
                     { "data": "destination" },
+                    { "data": "dateOfTravel"},
                     { "data": "carrier" },
-                    { "data": "dateOfTravel" },
 					{ "data": "dateOfPriceFall" },
 					{ "data": "predictedPrice" },
 					{ "data": "latitude" },
-					{ "data": "longitude" },
-					{ "data": "distance" },
-					{ "data": "seats" },
-                    { data: "id" ,
-                     "render": function ( data) {
-                                  return '<i id=" ' + data +' " class="edit-button glyphicon glyphicon-edit cursorPointer" ></i>';
-                                }
-                            },
-                     { data: "id" ,
-                        "render": function ( data ) {
-                                   return '<i id=" ' + data +' " class="remove-button glyphicon glyphicon-trash cursorPointer"></i>';
-                               }
-                     }
+					{ "data": "longitude" }
+					
+                   
 
                 ]
     } );
 
     var tableflt = $('#flightDataTable').DataTable();
+    
+    $('#flightDataTable thead th').each (function(){
+           
+        	var title = $('#flightDataTable thead th').eq($(this).index()).text();
+        	if(title==='Date of Travel'){
+        	        $(this).html('<input type="date" placeholder="Search '+title+'"/> ');
+        	}else{
+        	    	$(this).html('<input type="text" placeholder="Search '+title+'"/> ');
+        	}
+        
+        });
+        
+         tableflt.columns().eq(0).each(function( colIdx) {
+        	$('input' , tableflt.column(colIdx).header() ).on( 'keyup change', function() {
+        	    console.log($(this.value));
+        		tableflt
+        				.column(colIdx)
+        				.search( this.value)
+        				.draw();
+        	});
+        	
+        });	
+        
 
     // Delete flight event
-    $("body").on( 'click', '.remove-button', function () {
+  /*  $("body").on( 'click', '.remove-button', function () {
         var currentRow = $(this);
         var flightId = $(this).attr('id').trim();
          bootbox.confirm("Are you sure?", function(result) {
@@ -63,13 +76,13 @@ $(document).ready(function() {
                //
               }
          });
-    });
+    });*/
      
 		
 
-$('#fltModal').on('shown.bs.modal', function () {
+/*$('#fltModal').on('shown.bs.modal', function () {
   $('#fltForm').trigger("reset");
-});
+});*/
 
 // Show success alert message
 var showSuccessAlert = function (message) {
@@ -138,18 +151,5 @@ $.fn.serializeObject = function() {
       });
     */
     
-      $('#flightDataTable tfoot th').each (function(){
-        	var title = $('#flightDataTable thead th').eq($(this).index()).text();
-        	$(this).html('<input type="text" placeholder="Search '+title+'"/> ');
-        });
-        
-         tableflt.columns().eq(0).each(function( colIdx) {
-        	$('input' , tableflt.column(colIdx).footer() ).on( 'keyup change', function() {
-        		tableflt
-        				.column(colIdx)
-        				.search( this.value)
-        				.draw();
-        	});
-        });	
-	  
+      
 });
