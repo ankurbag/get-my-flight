@@ -52,36 +52,7 @@ $(document).ready(function() {
         	
         });	
         
-        
 
-    // Delete flight event
-  /*  $("body").on( 'click', '.remove-button', function () {
-        var currentRow = $(this);
-        var flightId = $(this).attr('id').trim();
-         bootbox.confirm("Are you sure?", function(result) {
-            if(result) {
-                    $.ajax({
-                     url: "/flight/delete",
-                     type: "GET",
-                     data: {fltId: flightId},
-                     success:function(response){
-                               if(response.status == SUCCESS) {
-                                  showSuccessAlert(response.msg);
-                                  tableflt.row(currentRow.parents('tr') ).remove().draw();
-                              } else {
-                                  showErrorAlert(serverErrorMessage);
-                              }
-                        },
-                     error: function(){
-                          showErrorAlert(serverErrorMessage);
-                       }
-                  });
-            } else {
-               //
-              }
-         });
-    });*/
-     
 		
 
 /*$('#fltModal').on('shown.bs.modal', function () {

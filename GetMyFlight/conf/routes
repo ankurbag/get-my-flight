@@ -10,7 +10,7 @@ GET     /flight/list                       controllers.FlightController.list
 
 #POST    /flight/search                      controllers.FlightController.search(fltId: Int)
 
-GET     /flight/delete                      controllers.FlightController.delete(fltId: Int)
+#GET     /flight/delete                      controllers.FlightController.delete(fltId: Int)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file                       controllers.Assets.versioned(path="/public", file: Asset)

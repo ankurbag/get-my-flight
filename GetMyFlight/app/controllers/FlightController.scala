@@ -33,53 +33,14 @@ class FlightController @Inject()(flightRepository: FlightRepository, val message
     }
   }
 
-  /**
-    * Handles request for creation of new flight
-    */
-  def create() = Action.async(parse.json) { request =>
-    logger.info("Flight Json ===> " + request.body)
-    request.body.validate[Flight].fold(error => Future.successful(BadRequest(JsError.toJson(error))), { flight =>
-      flightRepository.insert(flight).map { createdFlightId =>
-        Ok(successResponse(Json.toJson(Map("id" -> createdFlightId)), Messages("flight.success.created")))
-      }
-    })
-  }
+  
 
-  /**
-    * Handles request for deletion of existing flight by flight_id
-    */
-  def delete(flightId: Int) = Action.async { request =>
-    flightRepository.delete(flightId).map { _ =>
-      Ok(successResponse(Json.toJson("{}"), Messages("flight.success.deleted")))
-    }
-  }
-
-  /**
-    * Handles request for get flight details for editing
-    */
- /* def edit(flightId: Int): Action[AnyContent] = Action.async { request =>
-    flightRepository.getById(flightId).map { fltOpt =>
-      fltOpt.fold(Ok(errorResponse(Json.toJson("{}"), Messages("flight.error.flightNotExist"))))(flight => Ok(
-        successResponse(Json.toJson(flight), Messages("flight.success.flight"))))
-    }
-  }*/
 
   private def errorResponse(data: JsValue, message: String) = {
     obj("status" -> ERROR, "data" -> data, "msg" -> message)
   }
 
-  /**
-    * Handles request for update existing flights
-    */
-  def update = Action.async(parse.json) { request =>
-    logger.info("Flight Json ===> " + request.body)
-    request.body.validate[Flight].fold(
-	error => Future.successful(BadRequest(JsError.toJson(error))),
-	{
-	flight =>
-      flightRepository.update(flight).map { res => Ok(successResponse(Json.toJson("{}"), Messages("flight.success.updated"))) }
-    })
-  }
+ 
   
   def search(flightId: Int) = Action.async(parse.json) {request =>
 	logger.info("Flight Json ===> " + request.body)

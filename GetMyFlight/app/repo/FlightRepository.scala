@@ -12,7 +12,8 @@ import scala.concurrent.Future
 class FlightRepository @Inject()(protected val dbConfigProvider: DatabaseConfigProvider) extends FlightTable with HasDatabaseConfigProvider[JdbcProfile] {
 
   import driver.api._
-
+    
+    //For future use of inserting data directly into the application
   def insert(flight: Flight): Future[Int] = db.run {
     flightTableQueryInc += flight
   }
@@ -25,9 +26,6 @@ class FlightRepository @Inject()(protected val dbConfigProvider: DatabaseConfigP
     flightTableQuery.filter(_.id === flight.id).update(flight)
   }
 
-  def delete(id: Int): Future[Int] = db.run {
-    flightTableQuery.filter(_.id === id).delete
-  }
 
   def getAll(): Future[List[Flight]] = db.run {
     flightTableQuery.to[List].result
