@@ -14,16 +14,12 @@ $(document).ready(function() {
          "columns": [
                     { "data": "source" },
                     { "data": "destination" },
-                    { "data": "dateOfTravel",
-                        "type":"date",
-                        "format": "MM/DD/YYYY",
-                    },
+                    { "data": "monthOfTravel"},
+                    { "data": "dayOfTravel"},
                     { "data": "carrier" },
-					{ "data": "dateOfPriceFall" },
 					{"data": "actualPrice"},
 					{ "data": "predictedPrice" },
-					{ "data": "latitude" },
-					{ "data": "longitude" }
+					
 					
                    
 

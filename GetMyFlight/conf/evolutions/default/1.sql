@@ -1,9 +1,9 @@
 # --- !Ups
-CREATE TABLE "flight"("id" SERIAL PRIMARY KEY ,"source" varchar, "destination" varchar,"carrier" varchar,"dateOfTravel" varchar,"dateOfPriceFall" varchar,"actualPrice" varchar,"predictedPrice" varchar,"latitude" varchar,"longitude" varchar);
-INSERT INTO "flight" values (1,'Boston', 'New York','CA', '10/11/2016','10/11/2016', '1234','1234','70.23343', '67.2323232323');
-INSERT INTO "flight" values (2,'Boston', 'San Jose','CA', '10/11/2016','10/11/2016', '1234','1234','70.23343', '67.2323232323');
-INSERT INTO "flight" values (3,'Boston', 'Barcelona','CA', '10/11/2016','10/11/2016', '1234','1234','70.23343', '67.2323232323');
-INSERT INTO "flight" values (4,'Boston', 'Madrid','CA', '10/11/2016','10/11/2016', '1234','1234','70.23343', '67.2323232323');
+CREATE TABLE "flight"("id" SERIAL PRIMARY KEY ,"source" varchar, "destination" varchar,"carrier" varchar,"monthOfTravel" varchar,"dayOfTravel" varchar,"actualPrice" varchar,"predictedPrice" varchar);
+
+
+
+
 # --- !Downs
 
 DROP TABLE "flight";

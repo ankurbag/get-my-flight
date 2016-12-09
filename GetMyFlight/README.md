@@ -1,15 +1,14 @@
-#activator-play-slick-app
+#activator-GetMyFlight
 
-This is an activator project providing a seed for starting with Play 2.5.x & Slick, how to write unit test and how to use mocking for unit testing. It also demonstrates the use of evolution in Play 2.5.x .
-
+This is a play application written in scala to provide the customers with the cheapest flight options.
 
 -----------------------------------------------------------------------
 ###Instructions :-
 -----------------------------------------------------------------------
 Clone and run the app(default database is H2):
 
-     $ git clone git@github.com:knoldus/activator-play-slick-app.git
-     $ cd activator-play-slick-app
+     $ git clone git@https://github.com/ankurbag/CSYE7200_Scala_Project_Group3/GetMyFlight.git
+     $ cd activator-GetMyFlight
      $ ./activator run
     
 ![alt tag](/public/images/evolutions.png)
@@ -22,24 +21,7 @@ Run the app using Postgres database:
 
      $ ./activator 'run   -Dconfig.file=conf/postgres.conf'
     
------------------------------------------------------------------------
-###All the Screens :-
------------------------------------------------------------------------
-### Home Page
 
-![alt tag](/public/images/homepage.png)
-
-### Add an Employee
-
-![alt tag](/public/images/AddEmployee.png)
-
-### Edit an Employee
-
-![alt tag](/public/images/EditEmployee.png)
-
-### Delete an Employee
-
-![alt tag](/public/images/DeleteEmployee.png)
 
 -----------------------------------------------------------------------
 ###References :-

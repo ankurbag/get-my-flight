@@ -53,16 +53,15 @@ private[repo] trait FlightTable {
 	 val source = column[String]("source")
     val destination = column[String]("destination")
     val carrier = column[String]("carrier")
-    val dateOfTravel = column[String]("dateOfTravel")
-    val dateOfPriceFall = column[String]("dateOfPriceFall")
+    val monthOfTravel = column[String]("monthOfTravel")
+    val dayOfTravel = column[String]("dayOfTravel")
     val actualPrice = column[String]("actualPrice")
     val predictedPrice = column[String]("predictedPrice")
-    val latitude = column[String]("latitude")
-    val longitude = column[String]("longitude")
+    
 
 
 
-   def * = (source, destination, carrier, dateOfTravel, dateOfPriceFall, actualPrice, predictedPrice, latitude,longitude,id.?) <> ((Flight.apply _).tupled, Flight.unapply)
+   def * = (source, destination, carrier, monthOfTravel, dayOfTravel, actualPrice, predictedPrice,id.?) <> ((Flight.apply _).tupled, Flight.unapply)
   }
 
 }
