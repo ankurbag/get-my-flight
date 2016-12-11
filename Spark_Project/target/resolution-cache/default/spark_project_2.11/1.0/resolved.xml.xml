@@ -4,7 +4,7 @@
 		module="spark_project_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20161205172029"
+		publication="20161208190222"
 	>
 		<description>
 		Spark_Project
@@ -47,6 +47,7 @@
 		<dependency org="org.deeplearning4j" name="deeplearning4j-nlp" rev="0.5.0" conf="compile->default(compile)"/>
 		<dependency org="org.deeplearning4j" name="deeplearning4j-ui" rev="0.5.0" conf="compile->default(compile)"/>
 		<dependency org="org.jblas" name="jblas" rev="1.2.4" conf="compile->default(compile)"/>
+		<dependency org="mysql" name="mysql-connector-java" rev="5.1.12" conf="compile->default(compile)"/>
 		<dependency org="org.springframework" name="spring-core" rev="4.3.3.RELEASE" conf="compile->default(compile)"/>
 		<dependency org="org.nd4j" name="nd4j-native" rev="0.7.1" conf="compile->default(compile)"/>
 		<dependency org="org.nd4j" name="nd4j-native-platform" rev="0.7.1" conf="compile->default(compile)"/>

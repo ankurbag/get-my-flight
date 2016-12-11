@@ -48,6 +48,7 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="library" name="SBT: mysql:mysql-connector-java:5.1.12:jar" level="project" />
     <orderEntry type="library" name="SBT: org.nd4j:nd4j-native-platform:0.7.1:jar" level="project" />
     <orderEntry type="library" name="SBT: org.nd4j:nd4j-native:0.7.1:windows-x86_64:jar" level="project" />
     <orderEntry type="library" name="SBT: org.nd4j:nd4j-native:0.7.1:macosx-x86_64:jar" level="project" />

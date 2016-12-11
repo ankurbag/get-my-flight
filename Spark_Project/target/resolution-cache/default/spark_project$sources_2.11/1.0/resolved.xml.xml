@@ -4,7 +4,7 @@
 		module="spark_project$sources_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20161205172259"
+		publication="20161210191303"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
@@ -881,9 +881,6 @@
 		</dependency>
 		<dependency org="org.projectlombok" name="lombok" rev="1.16.10" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
 			<artifact name="lombok" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-		</dependency>
-		<dependency org="org.nd4j" name="nd4j-native-platform" rev="0.7.1" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile)">
-			<artifact name="nd4j-native-platform" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
 		<dependency org="org.scalatest" name="scalatest_2.11" rev="2.2.4" transitive="false" conf="test->default(compile);test-internal->default(compile)">
 			<artifact name="scalatest_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>

@@ -7,10 +7,10 @@
 		revision="1.0"
 		conf="test-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20161205172029"/>
+		date="20161208190222"/>
 	<dependencies>
 		<module organisation="org.scalatest" name="scalatest_2.11">
-			<revision name="2.2.4" status="release" pubdate="20150129021600" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scalatest.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="296">
+			<revision name="2.2.4" status="release" pubdate="20150129021600" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scalatest.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="297">
 				<license name="the Apache License, ASL Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="5022" time="0" location="C:\Users\Ankur\.ivy2\cache\org.scalatest\scalatest_2.11\ivy-2.2.4.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.pom"/>
 				<caller organisation="default" name="spark_project_2.11" conf="test, compile, provided, test-internal, runtime, optional" rev="2.2.4" rev-constraint-default="2.2.4" rev-constraint-dynamic="2.2.4" callerrev="1.0"/>
@@ -22,7 +22,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-lang.modules" name="scala-xml_2.11">
-			<revision name="1.0.2" status="release" pubdate="20140520041000" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="297">
+			<revision name="1.0.2" status="release" pubdate="20140520041000" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="298">
 				<license name="BSD 3-clause" url="http://opensource.org/licenses/BSD-3-Clause"/>
 				<metadata-artifact status="no" details="" size="3048" time="0" location="C:\Users\Ankur\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\ivy-1.0.2.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.pom"/>
 				<caller organisation="org.scalatest" name="scalatest_2.11" conf="default, compile, runtime, master" rev="1.0.2" rev-constraint-default="1.0.2" rev-constraint-dynamic="1.0.2" callerrev="2.2.4"/>
@@ -43,42 +43,42 @@
 			</revision>
 		</module>
 		<module organisation="org.nd4j" name="nd4j-native-platform">
-			<revision name="0.7.1" status="release" pubdate="20161201224319" resolver="jcenter" artresolver="jcenter" homepage="" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="295">
-				<metadata-artifact status="successful" details="" size="2172" time="420" location="C:\Users\Ankur\.ivy2\cache\org.nd4j\nd4j-native-platform\ivy-0.7.1.xml" searched="true" original-local-location="C:\Users\Ankur\.ivy2\cache\org.nd4j\nd4j-native-platform\ivy-0.7.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/nd4j/nd4j-native-platform/0.7.1/nd4j-native-platform-0.7.1.pom"/>
+			<revision name="0.7.1" status="release" pubdate="20161201224319" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="296">
+				<metadata-artifact status="no" details="" size="8941" time="0" location="C:\Users\Ankur\.ivy2\cache\org.nd4j\nd4j-native-platform\ivy-0.7.1.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/nd4j/nd4j-native-platform/0.7.1/nd4j-native-platform-0.7.1.pom"/>
 				<caller organisation="default" name="spark_project_2.11" conf="test, compile, provided, test-internal, runtime, optional" rev="0.7.1" rev-constraint-default="0.7.1" rev-constraint-dynamic="0.7.1" callerrev="1.0"/>
 				<artifacts>
-					<artifact name="nd4j-native-platform" type="jar" ext="jar" status="successful" details="" size="1623" time="1164" location="C:\Users\Ankur\.ivy2\cache\org.nd4j\nd4j-native-platform\jars\nd4j-native-platform-0.7.1.jar">
+					<artifact name="nd4j-native-platform" type="jar" ext="jar" status="no" details="" size="1623" time="0" location="C:\Users\Ankur\.ivy2\cache\org.nd4j\nd4j-native-platform\jars\nd4j-native-platform-0.7.1.jar">
 						<origin-location is-local="false" location="https://jcenter.bintray.com/org/nd4j/nd4j-native-platform/0.7.1/nd4j-native-platform-0.7.1.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.nd4j" name="nd4j-native">
-			<revision name="0.7.1" status="release" pubdate="20161202003550" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="285">
+			<revision name="0.7.1" status="release" pubdate="20161202003550" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="286">
 				<metadata-artifact status="no" details="" size="8990" time="0" location="C:\Users\Ankur\.ivy2\cache\org.nd4j\nd4j-native\ivy-0.7.1.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/nd4j/nd4j-native/0.7.1/nd4j-native-0.7.1.pom"/>
 				<caller organisation="default" name="spark_project_2.11" conf="test, compile, provided, test-internal, runtime, optional" rev="0.7.1" rev-constraint-default="0.7.1" rev-constraint-dynamic="0.7.1" callerrev="1.0"/>
 				<caller organisation="org.nd4j" name="nd4j-native-platform" conf="default, compile, runtime, master" rev="0.7.1" rev-constraint-default="0.7.1" rev-constraint-dynamic="0.7.1" callerrev="0.7.1"/>
 				<artifacts>
-					<artifact name="nd4j-native" type="jar" ext="jar" extra-classifier="windows-x86_64" status="successful" details="" size="10438952" time="16295" location="C:\Users\Ankur\.ivy2\cache\org.nd4j\nd4j-native\jars\nd4j-native-0.7.1-windows-x86_64.jar">
+					<artifact name="nd4j-native" type="jar" ext="jar" extra-classifier="windows-x86_64" status="no" details="" size="10438952" time="0" location="C:\Users\Ankur\.ivy2\cache\org.nd4j\nd4j-native\jars\nd4j-native-0.7.1-windows-x86_64.jar">
 						<origin-location is-local="false" location="https://jcenter.bintray.com/org/nd4j/nd4j-native/0.7.1/nd4j-native-0.7.1-windows-x86_64.jar"/>
 					</artifact>
 					<artifact name="nd4j-native" type="jar" ext="jar" status="no" details="" size="55894" time="0" location="C:\Users\Ankur\.ivy2\cache\org.nd4j\nd4j-native\jars\nd4j-native-0.7.1.jar">
 						<origin-location is-local="false" location="https://jcenter.bintray.com/org/nd4j/nd4j-native/0.7.1/nd4j-native-0.7.1.jar"/>
 					</artifact>
-					<artifact name="nd4j-native" type="jar" ext="jar" extra-classifier="linux-x86_64" status="successful" details="" size="9287286" time="41562" location="C:\Users\Ankur\.ivy2\cache\org.nd4j\nd4j-native\jars\nd4j-native-0.7.1-linux-x86_64.jar">
+					<artifact name="nd4j-native" type="jar" ext="jar" extra-classifier="linux-x86_64" status="no" details="" size="9287286" time="0" location="C:\Users\Ankur\.ivy2\cache\org.nd4j\nd4j-native\jars\nd4j-native-0.7.1-linux-x86_64.jar">
 						<origin-location is-local="false" location="https://jcenter.bintray.com/org/nd4j/nd4j-native/0.7.1/nd4j-native-0.7.1-linux-x86_64.jar"/>
 					</artifact>
-					<artifact name="nd4j-native" type="jar" ext="jar" extra-classifier="macosx-x86_64" status="successful" details="" size="11475071" time="25171" location="C:\Users\Ankur\.ivy2\cache\org.nd4j\nd4j-native\jars\nd4j-native-0.7.1-macosx-x86_64.jar">
+					<artifact name="nd4j-native" type="jar" ext="jar" extra-classifier="macosx-x86_64" status="no" details="" size="11475071" time="0" location="C:\Users\Ankur\.ivy2\cache\org.nd4j\nd4j-native\jars\nd4j-native-0.7.1-macosx-x86_64.jar">
 						<origin-location is-local="false" location="https://jcenter.bintray.com/org/nd4j/nd4j-native/0.7.1/nd4j-native-0.7.1-macosx-x86_64.jar"/>
 					</artifact>
-					<artifact name="nd4j-native" type="jar" ext="jar" extra-classifier="linux-ppc64le" status="successful" details="" size="4683455" time="37072" location="C:\Users\Ankur\.ivy2\cache\org.nd4j\nd4j-native\jars\nd4j-native-0.7.1-linux-ppc64le.jar">
+					<artifact name="nd4j-native" type="jar" ext="jar" extra-classifier="linux-ppc64le" status="no" details="" size="4683455" time="0" location="C:\Users\Ankur\.ivy2\cache\org.nd4j\nd4j-native\jars\nd4j-native-0.7.1-linux-ppc64le.jar">
 						<origin-location is-local="false" location="https://jcenter.bintray.com/org/nd4j/nd4j-native/0.7.1/nd4j-native-0.7.1-linux-ppc64le.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.nd4j" name="nd4j-native-api">
-			<revision name="0.7.1" status="release" pubdate="20161202003413" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="286">
+			<revision name="0.7.1" status="release" pubdate="20161202003413" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="287">
 				<metadata-artifact status="no" details="" size="7664" time="0" location="C:\Users\Ankur\.ivy2\cache\org.nd4j\nd4j-native-api\ivy-0.7.1.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/nd4j/nd4j-native-api/0.7.1/nd4j-native-api-0.7.1.pom"/>
 				<caller organisation="org.nd4j" name="nd4j-native" conf="default, compile, runtime, master" rev="0.7.1" rev-constraint-default="0.7.1" rev-constraint-dynamic="0.7.1" callerrev="0.7.1"/>
 				<artifacts>
@@ -89,7 +89,7 @@
 			</revision>
 		</module>
 		<module organisation="org.nd4j" name="nd4j-api">
-			<revision name="0.7.1" status="release" pubdate="20161202003544" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://nd4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master, master(*)" position="291">
+			<revision name="0.7.1" status="release" pubdate="20161202003544" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://nd4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master, master(*)" position="292">
 				<metadata-artifact status="no" details="" size="8864" time="0" location="C:\Users\Ankur\.ivy2\cache\org.nd4j\nd4j-api\ivy-0.7.1.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/nd4j/nd4j-api/0.7.1/nd4j-api-0.7.1.pom"/>
 				<caller organisation="org.datavec" name="datavec-data-codec" conf="default, compile, runtime, master" rev="0.5.0" rev-constraint-default="0.5.0" rev-constraint-dynamic="0.5.0" callerrev="0.5.0"/>
 				<caller organisation="org.nd4j" name="nd4j-native-api" conf="compile, runtime" rev="0.7.1" rev-constraint-default="0.7.1" rev-constraint-dynamic="0.7.1" callerrev="0.7.1"/>
@@ -117,7 +117,7 @@
 			</revision>
 		</module>
 		<module organisation="org.projectlombok" name="lombok">
-			<revision name="1.16.10" status="release" pubdate="20160714204049" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://projectlombok.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="294">
+			<revision name="1.16.10" status="release" pubdate="20160714204049" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://projectlombok.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="295">
 				<license name="The MIT License" url="https://projectlombok.org/LICENSE"/>
 				<metadata-artifact status="no" details="" size="2474" time="0" location="C:\Users\Ankur\.ivy2\cache\org.projectlombok\lombok\ivy-1.16.10.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/projectlombok/lombok/1.16.10/lombok-1.16.10.pom"/>
 				<caller organisation="org.datavec" name="datavec-api" conf="compile, runtime" rev="1.16.6" rev-constraint-default="1.16.6" rev-constraint-dynamic="1.16.6" callerrev="0.5.0"/>
@@ -149,7 +149,7 @@
 			</revision>
 		</module>
 		<module organisation="org.nd4j" name="jackson">
-			<revision name="0.7.1" status="release" pubdate="20161202003536" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="292">
+			<revision name="0.7.1" status="release" pubdate="20161202003536" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="293">
 				<metadata-artifact status="no" details="" size="6341" time="0" location="C:\Users\Ankur\.ivy2\cache\org.nd4j\jackson\ivy-0.7.1.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/nd4j/jackson/0.7.1/jackson-0.7.1.pom"/>
 				<caller organisation="org.nd4j" name="nd4j-api" conf="compile, runtime" rev="0.7.1" rev-constraint-default="0.7.1" rev-constraint-dynamic="0.7.1" callerrev="0.7.1"/>
 				<artifacts>
@@ -160,7 +160,7 @@
 			</revision>
 		</module>
 		<module organisation="org.codehaus.woodstox" name="stax2-api">
-			<revision name="3.1.4" status="release" pubdate="20140228012000" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://wiki.fasterxml.com/WoodstoxStax2" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="293">
+			<revision name="3.1.4" status="release" pubdate="20140228012000" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://wiki.fasterxml.com/WoodstoxStax2" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="294">
 				<license name="The BSD License" url="http://www.opensource.org/licenses/bsd-license.php"/>
 				<metadata-artifact status="no" details="" size="3386" time="0" location="C:\Users\Ankur\.ivy2\cache\org.codehaus.woodstox\stax2-api\ivy-3.1.4.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4.pom"/>
 				<caller organisation="org.nd4j" name="jackson" conf="compile, runtime" rev="3.1.4" rev-constraint-default="3.1.4" rev-constraint-dynamic="3.1.4" callerrev="0.7.1"/>
@@ -172,7 +172,7 @@
 			</revision>
 		</module>
 		<module organisation="org.nd4j" name="nd4j-buffer">
-			<revision name="0.7.1" status="release" pubdate="20161202003428" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="287">
+			<revision name="0.7.1" status="release" pubdate="20161202003428" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="288">
 				<metadata-artifact status="no" details="" size="5596" time="0" location="C:\Users\Ankur\.ivy2\cache\org.nd4j\nd4j-buffer\ivy-0.7.1.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/nd4j/nd4j-buffer/0.7.1/nd4j-buffer-0.7.1.pom"/>
 				<caller organisation="org.nd4j" name="nd4j-native-api" conf="compile, runtime" rev="0.7.1" rev-constraint-default="0.7.1" rev-constraint-dynamic="0.7.1" callerrev="0.7.1"/>
 				<caller organisation="org.datavec" name="datavec-data-image" conf="compile, runtime" rev="0.5.0" rev-constraint-default="0.5.0" rev-constraint-dynamic="0.5.0" callerrev="0.5.0"/>
@@ -194,7 +194,7 @@
 			</revision>
 		</module>
 		<module organisation="org.bytedeco" name="javacpp">
-			<revision name="1.2.7" status="release" pubdate="20161129064759" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://bytedeco.org/javacpp/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master, master(*)" position="290">
+			<revision name="1.2.7" status="release" pubdate="20161129064759" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://bytedeco.org/javacpp/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master, master(*)" position="291">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<license name="GNU General Public License (GPL) version 2, or any later version" url="http://www.gnu.org/licenses/"/>
 				<license name="GPLv2 with Classpath exception" url="http://www.gnu.org/software/classpath/license.html"/>
@@ -261,7 +261,7 @@
 			</revision>
 		</module>
 		<module organisation="org.nd4j" name="nd4j-context">
-			<revision name="0.7.1" status="release" pubdate="20161202003231" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="289">
+			<revision name="0.7.1" status="release" pubdate="20161202003231" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="290">
 				<metadata-artifact status="no" details="" size="5319" time="0" location="C:\Users\Ankur\.ivy2\cache\org.nd4j\nd4j-context\ivy-0.7.1.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/nd4j/nd4j-context/0.7.1/nd4j-context-0.7.1.pom"/>
 				<caller organisation="org.nd4j" name="nd4j-api" conf="compile, runtime" rev="0.7.1" rev-constraint-default="0.7.1" rev-constraint-dynamic="0.7.1" callerrev="0.7.1"/>
 				<caller organisation="org.nd4j" name="nd4j-api" conf="compile, runtime" rev="0.5.0" rev-constraint-default="0.5.0" rev-constraint-dynamic="0.5.0" callerrev="0.5.0"/>
@@ -283,7 +283,7 @@
 			</revision>
 		</module>
 		<module organisation="org.nd4j" name="nd4j-common">
-			<revision name="0.7.1" status="release" pubdate="20161202003506" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="288">
+			<revision name="0.7.1" status="release" pubdate="20161202003506" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="289">
 				<metadata-artifact status="no" details="" size="6750" time="0" location="C:\Users\Ankur\.ivy2\cache\org.nd4j\nd4j-common\ivy-0.7.1.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/nd4j/nd4j-common/0.7.1/nd4j-common-0.7.1.pom"/>
 				<caller organisation="org.nd4j" name="nd4j-context" conf="compile, runtime" rev="0.7.1" rev-constraint-default="0.7.1" rev-constraint-dynamic="0.7.1" callerrev="0.7.1"/>
 				<caller organisation="org.nd4j" name="nd4j-buffer" conf="compile, runtime" rev="0.5.0" rev-constraint-default="0.5.0" rev-constraint-dynamic="0.5.0" callerrev="0.5.0"/>
@@ -301,6 +301,18 @@
 				<caller organisation="org.nd4j" name="nd4j-buffer" conf="compile, runtime" rev="0.5.0" rev-constraint-default="0.5.0" rev-constraint-dynamic="0.5.0" callerrev="0.5.0"/>
 				<caller organisation="org.nd4j" name="nd4j-context" conf="compile, runtime" rev="0.5.0" rev-constraint-default="0.5.0" rev-constraint-dynamic="0.5.0" callerrev="0.5.0"/>
 				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="mysql" name="mysql-connector-java">
+			<revision name="5.1.12" status="release" pubdate="20150508065537" resolver="public" artresolver="public" homepage="http://dev.mysql.com/doc/connector-j/en/" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="285">
+				<license name="The GNU General Public License, Version 2" url="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html"/>
+				<metadata-artifact status="successful" details="" size="1105" time="65" location="C:\Users\Ankur\.ivy2\cache\mysql\mysql-connector-java\ivy-5.1.12.xml" searched="true" original-local-location="C:\Users\Ankur\.ivy2\cache\mysql\mysql-connector-java\ivy-5.1.12.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.12/mysql-connector-java-5.1.12.pom"/>
+				<caller organisation="default" name="spark_project_2.11" conf="test, compile, provided, test-internal, runtime, optional" rev="5.1.12" rev-constraint-default="5.1.12" rev-constraint-dynamic="5.1.12" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="mysql-connector-java" type="jar" ext="jar" status="successful" details="" size="732695" time="1320" location="C:\Users\Ankur\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.12.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.12/mysql-connector-java-5.1.12.jar"/>
+					</artifact>
 				</artifacts>
 			</revision>
 		</module>
@@ -2603,8 +2615,8 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.commons" name="commons-csv">
-			<revision name="1.1" status="release" pubdate="20141116154800" resolver="jcenter" artresolver="jcenter" homepage="http://commons.apache.org/proper/commons-csv/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="137">
-				<metadata-artifact status="successful" details="" size="14165" time="587" location="C:\Users\Ankur\.ivy2\cache\org.apache.commons\commons-csv\ivy-1.1.xml" searched="true" original-local-location="C:\Users\Ankur\.ivy2\cache\org.apache.commons\commons-csv\ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/commons/commons-csv/1.1/commons-csv-1.1.pom"/>
+			<revision name="1.1" status="release" pubdate="20141116154846" resolver="public" artresolver="public" homepage="http://commons.apache.org/proper/commons-csv/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="137">
+				<metadata-artifact status="successful" details="" size="14165" time="490" location="C:\Users\Ankur\.ivy2\cache\org.apache.commons\commons-csv\ivy-1.1.xml" searched="true" original-local-location="C:\Users\Ankur\.ivy2\cache\org.apache.commons\commons-csv\ivy-1.1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-csv/1.1/commons-csv-1.1.pom"/>
 				<caller organisation="com.databricks" name="spark-csv_2.10" conf="default, compile, runtime, master" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="1.5.0"/>
 				<artifacts>
 					<artifact name="commons-csv" type="jar" ext="jar" status="no" details="" size="36888" time="0" location="C:\Users\Ankur\.ivy2\cache\org.apache.commons\commons-csv\jars\commons-csv-1.1.jar">

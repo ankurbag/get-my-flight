@@ -16,7 +16,7 @@
 [debug] == resolving dependencies for default#spark_project-build;0.1-SNAPSHOT [provided]
 [debug] == resolving dependencies default#spark_project-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->default(compile)]
 [info] Resolving org.scala-lang#scala-library;2.10.4 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@73b2855
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@592d97ce
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.4
 [debug] 	found org.scala-lang#scala-library;2.10.4 in sbt-chain
 [debug] 	[2.10.4] org.scala-lang#scala-library;2.10.4
@@ -1766,7 +1766,7 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.8!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 3937ms :: artifacts dl 226ms
+[debug] :: resolution report :: resolve 3804ms :: artifacts dl 71ms
 [debug] 	report for default#spark_project-build;0.1-SNAPSHOT compile produced in G:\Semester IV\Scala\Project\Scala_Project\Spark_Project\project\target\resolution-cache\reports\default-spark_project-build-compile.xml
 [debug] 	report for default#spark_project-build;0.1-SNAPSHOT runtime produced in G:\Semester IV\Scala\Project\Scala_Project\Spark_Project\project\target\resolution-cache\reports\default-spark_project-build-runtime.xml
 [debug] 	report for default#spark_project-build;0.1-SNAPSHOT test produced in G:\Semester IV\Scala\Project\Scala_Project\Spark_Project\project\target\resolution-cache\reports\default-spark_project-build-test.xml
@@ -1780,5 +1780,5 @@
 [debug] 	report for default#spark_project-build;0.1-SNAPSHOT docs produced in G:\Semester IV\Scala\Project\Scala_Project\Spark_Project\project\target\resolution-cache\reports\default-spark_project-build-docs.xml
 [debug] 	report for default#spark_project-build;0.1-SNAPSHOT pom produced in G:\Semester IV\Scala\Project\Scala_Project\Spark_Project\project\target\resolution-cache\reports\default-spark_project-build-pom.xml
 [debug] 	report for default#spark_project-build;0.1-SNAPSHOT scala-tool produced in G:\Semester IV\Scala\Project\Scala_Project\Spark_Project\project\target\resolution-cache\reports\default-spark_project-build-scala-tool.xml
-[debug] 	resolve done (3937ms resolve - 226ms download)
+[debug] 	resolve done (3804ms resolve - 71ms download)
 [info] Done updating.

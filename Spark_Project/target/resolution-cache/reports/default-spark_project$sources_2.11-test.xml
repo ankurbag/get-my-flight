@@ -7,10 +7,10 @@
 		revision="1.0"
 		conf="test"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20161205172259"/>
+		date="20161210191303"/>
 	<dependencies>
 		<module organisation="org.scalatest" name="scalatest_2.11">
-			<revision name="2.2.4" status="release" pubdate="20150129021600" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scalatest.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="286">
+			<revision name="2.2.4" status="release" pubdate="20150129021600" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scalatest.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="285">
 				<license name="the Apache License, ASL Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="5022" time="0" location="C:\Users\Ankur\.ivy2\cache\org.scalatest\scalatest_2.11\ivy-2.2.4.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.pom"/>
 				<caller organisation="default" name="spark_project$sources_2.11" conf="test, compile, runtime" rev="2.2.4" rev-constraint-default="2.2.4" rev-constraint-dynamic="2.2.4" callerrev="1.0"/>
@@ -25,7 +25,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-lang.modules" name="scala-xml_2.11">
-			<revision name="1.0.2" status="release" pubdate="20140520041000" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="287">
+			<revision name="1.0.2" status="release" pubdate="20140520041000" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="286">
 				<license name="BSD 3-clause" url="http://opensource.org/licenses/BSD-3-Clause"/>
 				<metadata-artifact status="no" details="" size="3048" time="0" location="C:\Users\Ankur\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\ivy-1.0.2.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.pom"/>
 				<caller organisation="default" name="spark_project$sources_2.11" conf="test, compile, runtime" rev="1.0.2" rev-constraint-default="1.0.2" rev-constraint-dynamic="1.0.2" callerrev="1.0"/>
@@ -44,18 +44,6 @@
 				<evicted-by rev="1.0.2"/>
 				<caller organisation="default" name="spark_project$sources_2.11" conf="test, compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="1.0"/>
 				<artifacts>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.nd4j" name="nd4j-native-platform">
-			<revision name="0.7.1" status="release" pubdate="20161201224319" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="285">
-				<metadata-artifact status="no" details="" size="8941" time="0" location="C:\Users\Ankur\.ivy2\cache\org.nd4j\nd4j-native-platform\ivy-0.7.1.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/nd4j/nd4j-native-platform/0.7.1/nd4j-native-platform-0.7.1.pom"/>
-				<caller organisation="default" name="spark_project$sources_2.11" conf="test, compile, runtime" rev="0.7.1" rev-constraint-default="0.7.1" rev-constraint-dynamic="0.7.1" callerrev="1.0"/>
-				<artifacts>
-					<artifact name="nd4j-native-platform" type="jar" ext="jar" status="no" details="" size="1623" time="0" location="C:\Users\Ankur\.ivy2\cache\org.nd4j\nd4j-native-platform\jars\nd4j-native-platform-0.7.1.jar">
-						<origin-location is-local="false" location="https://jcenter.bintray.com/org/nd4j/nd4j-native-platform/0.7.1/nd4j-native-platform-0.7.1.jar"/>
-					</artifact>
-					<artifact name="nd4j-native-platform" type="src" ext="jar" extra-classifier="sources" status="failed" details="" size="0" time="0"/>
 				</artifacts>
 			</revision>
 		</module>
@@ -2227,15 +2215,15 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.commons" name="commons-csv">
-			<revision name="1.1" status="release" pubdate="20141116154800" resolver="jcenter" artresolver="jcenter" homepage="http://commons.apache.org/proper/commons-csv/" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="131">
-				<metadata-artifact status="successful" details="" size="14165" time="681" location="C:\Users\Ankur\.ivy2\cache\org.apache.commons\commons-csv\ivy-1.1.xml" searched="true" original-local-location="C:\Users\Ankur\.ivy2\cache\org.apache.commons\commons-csv\ivy-1.1.xml.original" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/commons/commons-csv/1.1/commons-csv-1.1.pom"/>
+			<revision name="1.1" status="release" pubdate="20141116154846" resolver="public" artresolver="public" homepage="http://commons.apache.org/proper/commons-csv/" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="131">
+				<metadata-artifact status="successful" details="" size="14165" time="137" location="C:\Users\Ankur\.ivy2\cache\org.apache.commons\commons-csv\ivy-1.1.xml" searched="true" original-local-location="C:\Users\Ankur\.ivy2\cache\org.apache.commons\commons-csv\ivy-1.1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-csv/1.1/commons-csv-1.1.pom"/>
 				<caller organisation="default" name="spark_project$sources_2.11" conf="test, compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="1.0"/>
 				<artifacts>
-					<artifact name="commons-csv" type="jar" ext="jar" status="no" details="" size="36888" time="0" location="C:\Users\Ankur\.ivy2\cache\org.apache.commons\commons-csv\jars\commons-csv-1.1.jar">
-						<origin-location is-local="false" location="https://jcenter.bintray.com/org/apache/commons/commons-csv/1.1/commons-csv-1.1.jar"/>
-					</artifact>
 					<artifact name="commons-csv" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="38045" time="0" location="C:\Users\Ankur\.ivy2\cache\org.apache.commons\commons-csv\srcs\commons-csv-1.1-sources.jar">
 						<origin-location is-local="false" location="https://jcenter.bintray.com/org/apache/commons/commons-csv/1.1/commons-csv-1.1-sources.jar"/>
+					</artifact>
+					<artifact name="commons-csv" type="jar" ext="jar" status="no" details="" size="36888" time="0" location="C:\Users\Ankur\.ivy2\cache\org.apache.commons\commons-csv\jars\commons-csv-1.1.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/apache/commons/commons-csv/1.1/commons-csv-1.1.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
