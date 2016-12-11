@@ -1,12 +1,11 @@
-# Scala_Project_Group3
-
-##GetMyFlight
+#GetMyFlight
+#### - A Personal Flight Recommender
 ###About the App
 #####GetMyFlight - PLAY App
 #####GetMyFlight_BOT - BOT App
 #####Spark_Project - Neural Project app develoed in scala
 
-###A Personal Flight Recommender
+
 
 
 
