@@ -1,15 +1,15 @@
-#GetMyFlight
+# GetMyFlight
 #### - A Personal Flight Recommender
-###About the App
-#####GetMyFlight - PLAY App
-#####GetMyFlight_BOT - BOT App
-#####Spark_Project - Neural Project app develoed in scala
+### About the App
+##### GetMyFlight - PLAY App
+##### GetMyFlight_BOT - BOT App
+##### Spark_Project - Neural Project app develoed in scala
 
 
 
 
 
-###Problem Targeted ->
+### Problem Targeted ->
 We all know and understand the unpredictability and uncertainty of flight fares. People always seem to be in a rush to book their flights, keeping a motto of ‘the earlier you book, the cheaper you get’ alive. Well, that might not be true most of the times.
 
 Similarly, Flight Reservation websites seem to be in mad rush to provide their customers with the cheapest flights ‘at that particular time’. Nobody seems to be bothered whether the rates will stay constant, go up in the future or maybe fall. This is the particular area we would like to do our digging/research. The possibility of rates falling in the future is momentous and we simply cannot let it go.
